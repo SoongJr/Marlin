@@ -454,6 +454,8 @@
 #define HEATER_6_MINTEMP   5
 #define HEATER_7_MINTEMP   5
 #define BED_MINTEMP        5
+// after losing temperature sensor, wait 2 seconds for it to recover and only abort if it doesn't (heating is disabled during that time anyway)
+#define BOGUS_TEMPERATURE_GRACE_PERIOD    2000
 
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
