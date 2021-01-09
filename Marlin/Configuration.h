@@ -683,14 +683,15 @@
   // Creality Ender-3 Pro
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
+    // FIND YOUR OWN: "M303 C8 S190" to run autotune on the extruder at 190 degreesC for 8 cycles.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  27.51,  27.51 }
-    #define DEFAULT_Ki_LIST {   2.26,   2.26 }
-    #define DEFAULT_Kd_LIST {  83.64,  83.64 }
+    #define DEFAULT_Kp_LIST {  35.97,  35.97 }
+    #define DEFAULT_Ki_LIST {   4.15,   4.15 }
+    #define DEFAULT_Kd_LIST {  77.85,  77.85 }
   #else
-    #define DEFAULT_Kp  27.51
-    #define DEFAULT_Ki   2.26
-    #define DEFAULT_Kd  83.64
+    #define DEFAULT_Kp 35.97
+    #define DEFAULT_Ki 4.15
+    #define DEFAULT_Kd 77.85
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -777,9 +778,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 222.39
-  #define DEFAULT_bedKi 34.75
-  #define DEFAULT_bedKd 948.84
+  #define DEFAULT_bedKp 118.76
+  #define DEFAULT_bedKi 14.10
+  #define DEFAULT_bedKd 666.74
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #else
