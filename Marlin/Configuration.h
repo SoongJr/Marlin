@@ -487,17 +487,18 @@
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
-  // Ender 3 v2
-  #if ENABLED(PID_PARAMS_PER_HOTEND)
+  // Ender 3 PRO v1.5
+  // FIND YOUR OWN: "M303 C8 S190" to run autotune on the extruder at 190 degreesC for 8 cycles.
+#if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  28.72,  28.72 }
-    #define DEFAULT_Ki_LIST {   2.62,   2.62 }
-    #define DEFAULT_Kd_LIST {  78.81,  78.81 }
+    #define DEFAULT_Kp_LIST {  35.97,  35.97 }
+    #define DEFAULT_Ki_LIST {   4.15,   4.15 }
+    #define DEFAULT_Kd_LIST {  77.85,  77.85 }
   #else
-    #define DEFAULT_Kp  28.72
-    #define DEFAULT_Ki   2.62
-    #define DEFAULT_Kd  78.81
+    #define DEFAULT_Kp 35.97
+    #define DEFAULT_Ki 4.15
+    #define DEFAULT_Kd 77.85
   #endif
 #endif // PIDTEMP
 
@@ -536,9 +537,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 462.10
-  #define DEFAULT_bedKi 85.47
-  #define DEFAULT_bedKd 624.59
+  #define DEFAULT_bedKp 118.76
+  #define DEFAULT_bedKi 14.10
+  #define DEFAULT_bedKd 666.74
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
