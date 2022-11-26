@@ -1,4 +1,5 @@
 version: "1"
+# manuall trigger a pull: https://pull.git.ci/process/SoongJr/Marlin
 rules:                      # Array of rules
   - base: 2.0.x             # Required. Target branch
     upstream: MarlinFirmware:2.0.x     # Required. Must be in the same fork network.
