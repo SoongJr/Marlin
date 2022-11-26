@@ -1,4 +1,5 @@
 version: "1"
+# verify this config file (after commit): https://pull-validation-uxx737qt0sl1.runkit.sh/?url=https%3A%2F%2Fraw.githubusercontent.com%2FSoongJr%2FMarlin%2Fpullbot%2F.github%2Fpull.yml
 # manuall trigger a pull: https://pull.git.ci/process/SoongJr/Marlin
 rules:                      # Array of rules
   - base: 2.0.x             # Required. Target branch
