@@ -9,3 +9,10 @@ This configuration is very similar to the Ender 3 V2 config except that the CR-1
 The bootloader which handles flashing new firmware on this board remembers the last filename you used.
 
 Therefore, to flash the compiled firmware binary onto the board you must give the "`firmware.bin`" file on the SD card a unique name, different from the name of the previous firmware file, or you will be greeted with a blank screen on the next boot.
+
+## My own isntructions:
+1. Open Marlin Auto Builder extension
+1. Build "STM32F103RE_creality (512K)" environment
+1. `explorer '.pio\build\STM32F103RE_creality'`
+1. transfer newest `firmware-*.bin` file to SD card root (FAT32-formatted, no other files)
+1. remove SD from host, stick in the printer and turn it on, wait for download to finish
