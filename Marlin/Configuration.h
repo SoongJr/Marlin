@@ -147,6 +147,7 @@
 
 // @section stepper drivers
 
+#define NO_CREALITY_422_DRIVER_WARNING // driver settings of my machine confirmed!
 /**
  * Stepper Drivers
  *
